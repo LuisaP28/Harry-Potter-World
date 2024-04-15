@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Cena.css">
+</head>
+<body>
+    
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+
+    <script src="Taller Hogwarts.js"></script>
+
+   
+      
+     
+        <form action="">
+            <div class="tituloCena"><h2> <strong>Hoy es la gran cena de bienvenida </strong> </h2></div>
+            <div class="subtituloCena"><h3> ¡El sombrero seleccionador te asignará una casa! </h3></div>
+            <br>
+            <label for="">Casa</label>
+            <input type="text" nombre="casa" id="casa">
+
+        <hr>
+
+        <div class="respuesta" id="respuestaFormulario">RESPUESTAS: </div>
+        <script>
+            let contenido = document.getElementById("2");
+            console.log(contenido);
+            function mostrar_contenido(params) {
+                contenido = document.getElementById("2").value;
+                console.log(contenido);
+                document.getElementById("2").value = "nuevo valor";
+                document.getElementById("2").style.background = "blue";
+    
+                document.getElementById("1").innerHTML = contenido;
+            }
+        
+            function guardarFormulario(inputs){
+                let formulario = document.getElementById("nombre").value, formulario2 = document.getElementById("edad").value, formulario3 = document.getElementById("familia").value, formulario4 = document.getElementById("linaje").value, formulario5 = document.getElementById("casa").value, formulario6 = document.getElementById("animal patronus").value, formulario7 = document.getElementById("cualidades").value;
+                
+                document.getElementById("respuestaFormulario").innerHTML = formulario +" "+ formulario2 +" , "+ formulario3 +" , " + formulario4 +" , " + formulario5 +" , "+ formulario6 +" , "+ formulario7;
+            }
+        </script>
+        <script>
+        // Recupera los datos del localStorage
+        var datosUsuario = JSON.parse(localStorage.getItem('datosUsuario'));
+ 
+        // Realiza la lógica para asignar la casa (puedes implementar tu propia lógica aquí)
+ 
+        // Redirige a la siguiente página (asignar-patronus.html)
+        window.location.href = 'asignar-patronus.html';
+        </script>
+
+    <hr>
+    <div class="logoCasas">
+        <img src="casas.jpg" alt=""> 
+    </div> 
+    
+</body>
+</html>

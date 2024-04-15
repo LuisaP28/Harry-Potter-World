@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Hogwarts Css.css">
+    </head>
+<body>
+    
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+
+    <script src="Taller Hogwarts.js"></script>
+
+
+    <header>
+        <div class="saludo">
+            </div>
+    </header>
+    
+
+  
+        <form action="">
+            <h2> <strong>Bienvenido a Hogwarts</strong></h2>
+            <h3> Llena tus datos y vive una nueva aventura en el mundo de Harry Potter </h3>
+            <br>
+            <img class="imagen" src="yop.jpeg" alt="">
+            <label for="">Nombre</label>
+            <input type="text" nombre="nombre" id="nombre" placeholder="Ingresa tu nombre">
+            <br>
+            <label for="">Edad</label>
+            <input type="text" nombre="edad" id="edad" placeholder="Ingresa tu edad">
+            <br>
+            <label for="">Familia</label>
+            <input type="text" nombre="familia" id="familia" placeholder="Ingresa el nombre de familia">
+            <br>
+            <label for="">Linaje</label>
+            <select class="Lin" name="linaje" id="linaje">
+                <option value="">Elige tu linaje</option>
+                <option value="Sangre pura">Sangre Pura</option>
+                <option value="Mestizo">Mestizo</option>
+                <option value="Muggle">Muggle</option>
+            </select>   
+ 
+            <br>
+            <label for="">Casa</label>
+            <input type="text" nombre="casa" id="casa" readonly placeholder="Aún no tienes casa">
+            <br>
+            <label for="">Animal Patronus</label>
+            <input type="text" nombre="animal patronus" id="animal patronus" readonly placeholder="Aún no tienes tu patronum">
+            <br>
+            <label for="">Cualidades</label>
+            <select class= "cuali" name="cualidades" id="cualidades">
+                <option value="">Elige tus valores</option>
+                <option value="Valor, Fuerza, Audacia">Valor, Fuerza, Audacia</option>
+                <option value="Justicia, Lealtad, Paciencia">Justicia, Lealtad, Paciencia</option>
+                <option value="Creatividad, Erudición, Inteligencia">Creatividad, Erudición, Inteligencia</option>
+                <option value="Ambición, Determinación, Astucia">Ambición, Determinación, Astucia</option>
+            </select>
+            
+            <!-- formulario.html -->
+<form id="myForm">
+    <!-- Tu formulario aquí -->
+    <button type="submit">Enviar</button>
+ </form>
+ 
+ <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+       event.preventDefault();
+ 
+       // Obtén los valores del formulario
+       var nombre = document.getElementById('nombre').value;
+       var familia = document.getElementById('familia').value;
+       var linaje = document.getElementById('linaje').value;
+       var cualidades = document.getElementById('cualidades').value;
+ 
+ 
+       // Almacena los datos en localStorage
+       localStorage.setItem('Hogwarts', JSON.stringify(Hogwarts));
+ 
+       // Redirige a la página de asignación de casa
+       window.location.href = 'cena.html';
+    });
+ </script>
+ 
+ 
+            <br>
+            <input type="button"  onclick="guardarFormulario()"  value="Enviar respuestas">
+        </form>
+        <hr>
+        <div class="respuesta" id="respuestaFormulario">RESPUESTAS: </div>
+        <script>
+            let contenido = document.getElementById("2");
+            console.log(contenido);
+            function mostrar_contenido(params) {
+                contenido = document.getElementById("2").value;
+                console.log(contenido);
+                document.getElementById("2").value = "nuevo valor";
+                document.getElementById("2").style.background = "blue";
+    
+                document.getElementById("1").innerHTML = contenido;
+            }
+        
+            function guardarFormulario(inputs){
+                let formulario = document.getElementById("nombre").value, formulario2 = document.getElementById("edad").value, formulario3 = document.getElementById("familia").value, formulario4 = document.getElementById("linaje").value, formulario5 = document.getElementById("casa").value, formulario6 = document.getElementById("animal patronus").value, formulario7 = document.getElementById("cualidades").value;
+                
+                document.getElementById("respuestaFormulario").innerHTML = formulario +" "+ formulario2 +" , "+ formulario3 +" , " + formulario4 +" , " + formulario5 +" , "+ formulario6 +" , "+ formulario7;
+            }
+        </script>
+        <div class="botones">
+            <div class="botonCena"></div>
+        <form action="./cena.html">
+            <button type="submit" class="buttonCena"> Cena de bienvenida </button>
+        </form>
+        <br>
+        <div class="botonAnimPatronus"></div>
+        <form action="./Animal Patronus.html">
+            <button type="submit" class="buttonAnimPatronus"> Clase de transformaciones </button>
+        </form>
+        <br>
+        <div class="botonBoggart"></div>
+        <form action="./Boggart.html">
+            <button type="submit" class="buttonBoggart"> Clase contra las artes oscuras </button>
+        </form>
+        </div>
+        
+
+    </body>
+    </html>
+
+</body>
+</html>

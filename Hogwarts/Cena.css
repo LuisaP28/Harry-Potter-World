@@ -1,0 +1,32 @@
+body{
+    background-image: url(./comedor.gif);
+    height: auto;
+    background-size: 100%;
+    font-family: 'Harry Potter', sans-serif;
+}
+
+.imagen{
+    align-items: center;
+    width: 159px;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloCena{
+    color: beige;
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 50px;
+}
+
+.subtituloCena{
+    color: beige;
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 30px;
+}
